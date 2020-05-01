@@ -2,6 +2,7 @@ import 'package:dello/themes/app_theme.dart';
 import 'package:dello/ui/startup_view.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:statusbar/statusbar.dart';
 
 import 'provider/theme_provider.dart';
 

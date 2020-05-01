@@ -1,4 +1,3 @@
-import 'package:dello/themes/colors.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryTextfield extends StatelessWidget {
@@ -41,10 +40,10 @@ class PrimaryTextfield extends StatelessWidget {
         children: <Widget>[
           Container(
             decoration: BoxDecoration(
-              color: Theme.of(context).colorScheme.background,
+              color: Theme.of(context).colorScheme.surface,
               boxShadow: [
                 BoxShadow(
-                  color: lightThemeFieldHintColor.withOpacity(0.3),
+                  color: Theme.of(context).colorScheme.onSurface.withOpacity(0.3),
                   blurRadius: 4,
                   offset: Offset(0.0, 1.3),
                 ),

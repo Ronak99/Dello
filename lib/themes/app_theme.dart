@@ -6,26 +6,90 @@ class AppTheme {
   static final TextTheme _lightTextTheme = TextTheme(
     // for app bars
     title: TextStyle(
-      fontSize: 25,
+      fontSize: 30,
       fontFamily: THEME_FONT,
-      color: Colors.black,
+      fontWeight: FontWeight.w700,
     ),
     overline: TextStyle(
-      fontWeight: FontWeight.w600,
-      fontSize: 16,
-      letterSpacing: 0.5,
+      fontWeight: FontWeight.w500,
+      fontSize: 15,
+      letterSpacing: 0.3,
       height: 1.5,
+    ),
+    headline: TextStyle(
+      fontWeight: FontWeight.w700,
+      fontSize: 18,
+      letterSpacing: 0.3,
+      height: 1.5,
+    ),
+    subtitle: TextStyle(
+      fontWeight: FontWeight.w500,
+      fontSize: 15,
+      letterSpacing: 0.3,
+      height: 1.5,
+      color: Colors.black54
     ),
   );
 
   static final ThemeData lightTheme = ThemeData(
     primaryColor: lightThemeBlue,
     backgroundColor: lightThemeBackgroundColor,
+    primaryColorDark: Colors.black,
     fontFamily: THEME_FONT,
     buttonTheme: ButtonThemeData(
       textTheme: ButtonTextTheme.primary,
-      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap
+      materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
     ),
+    colorScheme: ColorScheme(
+      brightness: Brightness.light,
+      onPrimary: Colors.red,
+      primary: lightThemeBlue,
+      background: lightThemeBackgroundColor,
+      onBackground: lightThemeBackgroundColor.withOpacity(0.2),
+      error: lightThemeRed,
+      onError: lightThemeRed,
+      surface: Colors.white,
+      onSurface: lightThemeFieldHintColor,
+      secondary: Colors.black.withOpacity(0.55),
+      onSecondary: Colors.grey,
+      primaryVariant: Colors.lightBlue,
+      secondaryVariant: Colors.pink,
+    ),
+    brightness: Brightness.light,
+    textTheme: _lightTextTheme,
+    appBarTheme: AppBarTheme(
+      brightness: Brightness.light,
+      color: Colors.transparent,
+      elevation: 0,
+      iconTheme: IconThemeData(color: Colors.black, size: 10),
+    ),
+    inputDecorationTheme: InputDecorationTheme(
+      border: InputBorder.none,
+      alignLabelWithHint: false,
+      labelStyle: TextStyle(
+        color: lightThemeFieldHintColor,
+        fontWeight: FontWeight.w400,
+        fontSize: 15,
+        letterSpacing: 0.5,
+        height: 1.5,
+      ),
+      errorStyle: TextStyle(
+        color: lightThemeRed,
+        fontSize: 12,
+        fontWeight: FontWeight.w500,
+        letterSpacing: 0.5,
+        height: 1.5,
+      ),
+    ),
+  );
+
+  static final ThemeData darkTheme = ThemeData(
+    primaryColor: Colors.green,
+    backgroundColor: Colors.red,
+    fontFamily: THEME_FONT,
+    buttonTheme: ButtonThemeData(
+        textTheme: ButtonTextTheme.primary,
+        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap),
     colorScheme: ColorScheme(
       brightness: Brightness.light,
       onPrimary: Colors.red,
@@ -67,35 +131,6 @@ class AppTheme {
         fontWeight: FontWeight.w500,
         letterSpacing: 0.5,
         height: 1.5,
-      ),
-    ),
-  );
-
-  static final ThemeData darkTheme = ThemeData(
-    primaryColor: lightThemeBlue,
-    colorScheme: ColorScheme(
-      background: lightThemeBackgroundColor,
-      brightness: Brightness.light,
-      error: lightThemeRed,
-      onError: lightThemeRed,
-      surface: Colors.white,
-      onPrimary: null,
-      onBackground: lightThemeBackgroundColor.withOpacity(0.2),
-      onSecondary: null,
-      onSurface: null,
-      primary: null,
-      primaryVariant: null,
-      secondary: null,
-      secondaryVariant: null,
-    ),
-    brightness: Brightness.light,
-    textTheme: _lightTextTheme,
-    appBarTheme: AppBarTheme(
-      brightness: Brightness.light,
-      color: Colors.transparent,
-      elevation: 0,
-      iconTheme: IconThemeData(
-        color: Colors.black,
       ),
     ),
   );

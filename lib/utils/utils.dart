@@ -1,5 +1,6 @@
 import 'package:dello/enum/toast_type.dart';
 import 'package:dello/themes/colors.dart';
+import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 class Utils {
@@ -17,4 +18,16 @@ class Utils {
           toastType != ToastType.SUCCESS ? lightThemeRed : lightThemeGreen,
     );
   }
+
+  static void navigateTo(context, Widget screen) =>
+      Navigator.push(context, MaterialPageRoute(builder: (context) => screen));
+
+  static void replaceWith(context, Widget screen) => Navigator.pushReplacement(
+      context, MaterialPageRoute(builder: (context) => screen));
+
+  static void pushAndRemovePrevious(context, Widget screen) =>
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => screen),
+          (Route<dynamic> route) => false);
 }
