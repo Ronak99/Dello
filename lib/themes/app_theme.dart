@@ -10,6 +10,19 @@ class AppTheme {
       fontFamily: THEME_FONT,
       fontWeight: FontWeight.w700,
     ),
+    body1: TextStyle(
+      fontWeight: FontWeight.w700,
+      fontSize: 25,
+      letterSpacing: 0.3,
+      height: 1.5,
+    ),
+    body2: TextStyle(
+      fontWeight: FontWeight.w500,
+      fontSize: 18,
+      letterSpacing: 0.3,
+      height: 1.5,
+      color: lightBody2Color,
+    ),
     overline: TextStyle(
       fontWeight: FontWeight.w500,
       fontSize: 15,
@@ -26,14 +39,21 @@ class AppTheme {
       fontWeight: FontWeight.w500,
       fontSize: 15,
       letterSpacing: 0.3,
+      color: Colors.black54,
+    ),
+    subhead: TextStyle(
+      fontWeight: FontWeight.w700,
+      fontSize: 15,
+      letterSpacing: 0.3,
       height: 1.5,
-      color: Colors.black54
     ),
   );
 
   static final ThemeData lightTheme = ThemeData(
     primaryColor: lightThemeBlue,
     backgroundColor: lightThemeBackgroundColor,
+    accentColor: lightAccentColor,
+
     primaryColorDark: Colors.black,
     fontFamily: THEME_FONT,
     buttonTheme: ButtonThemeData(
@@ -50,8 +70,8 @@ class AppTheme {
       onError: lightThemeRed,
       surface: Colors.white,
       onSurface: lightThemeFieldHintColor,
-      secondary: Colors.black.withOpacity(0.55),
-      onSecondary: Colors.grey,
+      secondary: lightThemeContrastOnBackgroundColor,
+      onSecondary: lightBody2Color,
       primaryVariant: Colors.lightBlue,
       secondaryVariant: Colors.pink,
     ),

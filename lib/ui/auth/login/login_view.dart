@@ -1,4 +1,4 @@
-import 'package:dello/ui/widgets/appbar/dello_appbar.dart';
+import 'package:dello/ui/widgets/dello_components/dello_appbar.dart';
 import 'package:dello/ui/widgets/buttons/custom_back_button.dart';
 import 'package:flutter/material.dart';
 

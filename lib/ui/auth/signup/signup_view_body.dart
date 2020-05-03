@@ -1,3 +1,4 @@
+import 'package:dello/constants/dimension_constants.dart';
 import 'package:dello/ui/auth/login/login_view.dart';
 import 'package:dello/ui/widgets/arrow_statement.dart';
 import 'package:dello/ui/widgets/buttons/primary_button.dart';
@@ -22,19 +23,19 @@ class SignUpViewBody extends StatelessWidget {
               labelText: "Name",
               validator: (value) => Validator.simpleValidation(value),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: dimen10),
             PrimaryTextfield(
               labelText: "Email",
               keyboardType: TextInputType.emailAddress,
               validator: (value) => Validator.validateEmail(value),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: dimen10),
             PrimaryTextfield(
               labelText: "Password",
               keyboardType: TextInputType.visiblePassword,
               validator: (value) => Validator.validatePassword(value),
             ),
-            SizedBox(height: 15),
+            SizedBox(height: dimen15),
             ArrowStatement(
               text: "Already have an account?",
               onTap: () => Utils.navigateTo(context, LoginView()),
