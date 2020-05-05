@@ -17,7 +17,9 @@ class ContactContainer extends StatelessWidget {
       decoration: BoxDecoration(
         border: Border(
           bottom: BorderSide(
-            color: showBorder ? Theme.of(context).colorScheme.secondary : Colors.transparent,
+            color: showBorder
+                ? Theme.of(context).colorScheme.onSecondary
+                : Colors.transparent,
           ),
         ),
       ),
@@ -47,7 +49,8 @@ class ContactContainer extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w400,
-                  color: Theme.of(context).colorScheme.onSurface,
+                  color:
+                      Theme.of(context).inputDecorationTheme.labelStyle.color,
                 ),
               ),
             ],

@@ -8,7 +8,7 @@ class VerifyEmailView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF9F9F9),
+      backgroundColor: Theme.of(context).backgroundColor,
       appBar: DelloAppBar(
         title: Text(
           "Verify Email",

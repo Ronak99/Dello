@@ -28,7 +28,7 @@ class StatsContainer extends StatelessWidget {
             textAlign: TextAlign.left,
             style: TextStyle(
               fontWeight: FontWeight.w600,
-              color: Theme.of(context).colorScheme.surface,
+              color: Color(0xffF5F5F5),
               fontSize: 14,
             ),
           ),
@@ -36,7 +36,7 @@ class StatsContainer extends StatelessWidget {
             count,
             style: TextStyle(
               fontWeight: FontWeight.w800,
-              color: Theme.of(context).colorScheme.surface,
+              color: Color(0xffF5F5F5),
               fontSize: 45,
             ),
           ),

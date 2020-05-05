@@ -4,3 +4,4 @@ const double dimen15 = 15;
 const double dimen20 = 20;
 const double dimen25 = 25;
 const double dimen30 = 30;
+const double dimen50 = 50;

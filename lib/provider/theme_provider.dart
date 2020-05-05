@@ -17,6 +17,8 @@ class ThemeProvider extends ChangeNotifier {
   setDarkTheme() => setTheme(AppTheme.darkTheme);
   setLightTheme() => setTheme(AppTheme.lightTheme);
 
+  bool isDark() => _themeData == AppTheme.darkTheme;
+
   toggleTheme() {
     _themeData != AppTheme.darkTheme ? setDarkTheme() : setLightTheme();
   }

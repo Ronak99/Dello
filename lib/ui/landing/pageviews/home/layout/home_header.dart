@@ -1,6 +1,8 @@
 import 'package:dello/constants/dimension_constants.dart';
 import 'package:dello/constants/string_constants.dart';
+import 'package:dello/ui/profile/user_profile.dart';
 import 'package:dello/ui/widgets/cached_image.dart';
+import 'package:dello/utils/utils.dart';
 import 'package:flutter/material.dart';
 
 class HomeHeader extends StatelessWidget {
@@ -24,10 +26,13 @@ class HomeHeader extends StatelessWidget {
               ),
             ],
           ),
-          CachedImage(
-            currentUserAvatar,
-            isRound: true,
-            radius: 50,
+          GestureDetector(
+            onTap: () => Utils.navigateTo(context, UserProfile()),
+            child: CachedImage(
+              currentUserAvatar,
+              isRound: true,
+              radius: 50,
+            ),
           ),
         ],
       ),

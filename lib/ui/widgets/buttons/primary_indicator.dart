@@ -23,7 +23,7 @@ class PrimaryIndicator extends StatelessWidget {
         width: dimensions,
         decoration: BoxDecoration(
           border: Border.all(
-            color: Theme.of(context).colorScheme.secondary,
+            color: Theme.of(context).colorScheme.onSecondary,
           ),
           color: Theme.of(context).colorScheme.background,
           shape: isRound ? BoxShape.circle : BoxShape.rectangle,

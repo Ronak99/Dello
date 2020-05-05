@@ -11,7 +11,7 @@ class DelloBottomNavBar extends StatelessWidget {
     "calendar_icon"
   ];
 
-  @override
+  @override   
   Widget build(BuildContext context) {
     final BottomNavigationProvider _bottomNavigationProvider =
         Provider.of<BottomNavigationProvider>(context);
@@ -19,32 +19,6 @@ class DelloBottomNavBar extends StatelessWidget {
     onTap(int pageIndex) {
       _bottomNavigationProvider.setCurrentIndex(pageIndex);
     }
-
-    // getBottomNavigationItems() {
-    //   List<Widget> bottomNavigationItems = [];
-
-    //   for (int i = 0; i < iconNameList.length; i++) {
-    //     var currentIndex = i > 2 ? i - 1 : i;
-
-    //     bottomNavigationItems.add(
-    //       iconNameList[i] != null
-    //           ? GestureDetector(
-    //               onTap: () => onTap(currentIndex),
-    //               child: Container(
-    //                 child: SvgIcon(
-    //                   iconName: iconNameList[currentIndex],
-    //                   color: (i != _bottomNavigationProvider.getCurrentIndex)
-    //                       ? Theme.of(context).colorScheme.onSurface
-    //                       : Theme.of(context).primaryColor,
-    //                 ),
-    //               ),
-    //             )
-    //           : Spacer(),
-    //     );
-    //   }
-
-    //   return bottomNavigationItems;
-    // }
 
     return Container(
       decoration: BoxDecoration(
@@ -54,16 +28,18 @@ class DelloBottomNavBar extends StatelessWidget {
             width: 1.5,
           ),
         ),
+        
       ),
       child: BottomNavigationBar(
         selectedItemColor: Theme.of(context).primaryColor,
         unselectedItemColor: Color(0xff828282),
         showSelectedLabels: true,
         showUnselectedLabels: true,
+        
         currentIndex: _bottomNavigationProvider.getCurrentIndex,
         onTap: onTap,
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         type: BottomNavigationBarType.fixed,
         selectedFontSize: 16,
         items: iconNameList
@@ -74,7 +50,7 @@ class DelloBottomNavBar extends StatelessWidget {
                   color: (iconName !=
                           iconNameList[
                               _bottomNavigationProvider.getCurrentIndex])
-                      ? Theme.of(context).colorScheme.onSurface
+                      ? Theme.of(context).colorScheme.onSecondary
                       : Theme.of(context).primaryColor,
                 ),
                 title: SizedBox(height: 0, width: 0),
@@ -85,10 +61,3 @@ class DelloBottomNavBar extends StatelessWidget {
     );
   }
 }
-
-// BottomAppBar(
-//         child: Row(
-//           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//           children: getBottomNavigationItems(),
-//         ),
-//       ),

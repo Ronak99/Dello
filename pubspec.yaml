@@ -28,6 +28,9 @@ dependencies:
   # cached network image
   cached_network_image: ^2.2.0
 
+  # animations
+  animations: ^1.0.0+5
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -38,16 +41,17 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     # svgs
-   - assets/svg/theme_arrow.svg
-   - assets/svg/add_icon.svg
-   - assets/svg/calendar_icon.svg
-   - assets/svg/home_icon.svg
-   - assets/svg/notification_icon.svg
-   - assets/svg/search_icon.svg
-
-   # pngs
-   - assets/images/mail_unconfirmed.png
-   - assets/images/no_image.png
+  - assets/svg/theme_arrow.svg
+  - assets/svg/add_icon.svg
+  - assets/svg/calendar_icon.svg
+  - assets/svg/home_icon.svg
+  - assets/svg/notification_icon.svg
+  - assets/svg/search_icon.svg
+  - assets/svg/import_image_icon.svg
+  - assets/svg/attachment_icon.svg
+  # pngs
+  - assets/images/mail_unconfirmed.png
+  - assets/images/no_image.png
   
 
   fonts:

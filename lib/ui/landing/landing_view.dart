@@ -21,7 +21,6 @@ class LandingView extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       bottomNavigationBar: DelloBottomNavBar(),
-      
       floatingActionButton: DelloFloatingActionButton(),
       body: SafeArea(
         child: Consumer<BottomNavigationProvider>(

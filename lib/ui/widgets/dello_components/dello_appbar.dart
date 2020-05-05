@@ -5,6 +5,7 @@ class DelloAppBar extends StatelessWidget implements PreferredSizeWidget {
   final List<Widget> actions;
   final Widget leading;
   final bool centerTitle;
+  final bool automaticallyImplyLeading;
 
   const DelloAppBar({
     Key key,
@@ -12,6 +13,7 @@ class DelloAppBar extends StatelessWidget implements PreferredSizeWidget {
     @required this.actions,
     this.leading,
     @required this.centerTitle,
+    this.automaticallyImplyLeading = false,
   }) : super(key: key);
 
   @override
@@ -21,6 +23,7 @@ class DelloAppBar extends StatelessWidget implements PreferredSizeWidget {
       leading: leading ?? null,
       actions: actions,
       centerTitle: centerTitle,
+      automaticallyImplyLeading: automaticallyImplyLeading,
       title: title,
     );
   }

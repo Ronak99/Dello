@@ -46,14 +46,15 @@ class NewProjectBody extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.w400,
-                        color: Theme.of(context).colorScheme.onSurface,
+                        color: Theme.of(context)
+                            .inputDecorationTheme
+                            .labelStyle
+                            .color,
                       ),
                     ),
                     SizedBox(height: 20),
                     Container(
-                      constraints: BoxConstraints(
-                        maxHeight: 45
-                      ),
+                      constraints: BoxConstraints(maxHeight: 45),
                       child: ProjectTeamContainer(
                         showCompact: false,
                       ),

@@ -8,6 +8,7 @@ class TabbarContainer extends StatelessWidget {
     return DefaultTabController(
       length: 2,
       child: Scaffold(
+        backgroundColor: Theme.of(context).backgroundColor,
         appBar: TabBar(
           indicatorWeight: 3.0,
           indicatorColor: Theme.of(context).primaryColor,
@@ -15,7 +16,8 @@ class TabbarContainer extends StatelessWidget {
           labelColor: Theme.of(context).primaryColor,
           labelStyle: Theme.of(context).textTheme.subhead,
           unselectedLabelStyle: Theme.of(context).textTheme.overline,
-          unselectedLabelColor: Theme.of(context).colorScheme.onSurface,
+              unselectedLabelColor:
+                  Theme.of(context).inputDecorationTheme.labelStyle.color,
           isScrollable: false,
           tabs: [
             Container(
