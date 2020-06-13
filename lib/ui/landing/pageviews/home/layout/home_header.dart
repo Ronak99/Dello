@@ -28,10 +28,13 @@ class HomeHeader extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () => Utils.navigateTo(context, UserProfile()),
-            child: CachedImage(
-              currentUserAvatar,
-              isRound: true,
-              radius: 50,
+            child: Hero(
+              tag: "HEROPROFILEWIDGET",
+                          child: CachedImage(
+                currentUserAvatar,
+                isRound: true,
+                radius: 50,
+              ),
             ),
           ),
         ],

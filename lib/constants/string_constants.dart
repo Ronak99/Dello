@@ -17,3 +17,7 @@ const String userAvatar4 = "";
 const String userAvatar5 = "";
 const String userAvatar6 = "";
 const String userAvatar7 = "";
+
+const String currentUserCoverImage = "https://png.pngtree.com/thumb_back/fw800/back_pic/04/03/59/52580865a704520.jpg";
+
+const String CURRENT_THEME_KEY = "current_theme_key";

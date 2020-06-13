@@ -15,7 +15,6 @@ class LoginView extends StatelessWidget {
           style: Theme.of(context).textTheme.title,
         ),
         centerTitle: true,
-        leading: CustomBackButton(),
         actions: <Widget>[],
       ),
       body: LoginViewBody(),

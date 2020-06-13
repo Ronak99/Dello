@@ -97,6 +97,7 @@ class AppTheme {
     primaryColor: lightThemeBlue,
     backgroundColor: lightThemeBackgroundColor,
     accentColor: lightAccentColor,
+    brightness: Brightness.light,
     primaryColorDark: Colors.black,
     fontFamily: THEME_FONT,
     buttonTheme: ButtonThemeData(
@@ -118,7 +119,7 @@ class AppTheme {
       primaryVariant: Colors.lightBlue,
       secondaryVariant: Colors.pink,
     ),
-    brightness: Brightness.light,
+    
     textTheme: _lightTextTheme,
     appBarTheme: AppBarTheme(
       brightness: Brightness.light,
@@ -149,7 +150,7 @@ class AppTheme {
   static final ThemeData darkTheme = ThemeData(
     primaryColor: darkThemeBlue,
     backgroundColor: darkThemeBackgroundColor,
-    
+    brightness: Brightness.dark,
     accentColor: darkAccentColor,
     primaryColorDark: Colors.white,
     fontFamily: THEME_FONT,
@@ -172,7 +173,7 @@ class AppTheme {
       primaryVariant: Colors.lightBlue,
       secondaryVariant: Colors.pink,
     ),
-    brightness: Brightness.dark,
+    
     textTheme: _darkTextTheme,
     appBarTheme: AppBarTheme(
       brightness: Brightness.dark,

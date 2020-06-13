@@ -1,8 +1,8 @@
 import 'package:dello/constants/dimension_constants.dart';
-import 'package:dello/provider/theme_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+
+import 'widgets/theme_switcher.dart';
 
 class SettingsItem extends StatelessWidget {
   final String text;
@@ -40,36 +40,8 @@ class SettingsItem extends StatelessWidget {
             ),
           ),
           Spacer(),
-          showSwitch ? ItemSwitch() : Container(),
+          showSwitch ? ThemeSwitcher() : Container(),
         ],
-      ),
-    );
-  }
-}
-
-class ItemSwitch extends StatefulWidget {
-  @override
-  _ItemSwitchState createState() => _ItemSwitchState();
-}
-
-class _ItemSwitchState extends State<ItemSwitch> {
-  @override
-  Widget build(BuildContext context) {
-    final ThemeProvider themeProvider = Provider.of<ThemeProvider>(context);
-
-    toggleSwitch(val) {
-      if (val) {
-        themeProvider.setDarkTheme();
-      } else {
-        themeProvider.setLightTheme();
-      }
-    }
-
-    return Consumer<ThemeProvider>(
-      builder: (context, provider, _) => CupertinoSwitch(
-        onChanged: toggleSwitch,
-        value: provider.isDark(),
-        activeColor: Theme.of(context).primaryColor,
       ),
     );
   }
